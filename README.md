@@ -1,4 +1,4 @@
-# mongodb_rh
+# mongodb-hr
 
 ### Part 1 - Concepts
 
