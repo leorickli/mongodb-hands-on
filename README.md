@@ -90,11 +90,17 @@ B. **Modeling**
   2. **Create a small model that involves two collections with cardinalities 1-N. The name of the collections must be “LM_col1a” and “LM_col2a”. In this case, use the concept of referencing the id from one collection to another (send it to side N as if it were the primary key on side 1).**
   3. **Insert 2 documents into the collection (side 1).**
   4. **Insert 4 documents into the collection (N side). Note: Side 1 (is as if it were the mother collection) and side N (is as if it were the daughter collection). In item (B2) each document from the mother collection must reference 2 documents from the daughter collection.**
+<img width="576" alt="Screenshot 2023-12-28 at 18 08 38" src="https://github.com/leorickli/mongodb-hr/assets/106999054/d78c17d9-700e-410e-9510-17a9fb1ffcad">
+<img width="741" alt="Screenshot 2023-12-28 at 18 07 34" src="https://github.com/leorickli/mongodb-hr/assets/106999054/ae54e5a8-0614-456b-b6e7-9889ce82528d">
+
+  
   5. **Create a small model that involves two collections with cardinalities N-N. The name of the collections must be “LM_col1b” and “LM_col2b”. In this case, you will indicate whether you will use the reference or whether you will embed the document in the other document.**
      1. Create two name collections (if you embark) or.
      2. Create three collections (if you use reference).
      3. If you chose option (B3a), create two collections and insert 2 documents into each collection.
      4. If you chose option (B3b), create the three collections and insert 2 documents into each of the collections.
+<img width="588" alt="Screenshot 2023-12-28 at 18 08 58" src="https://github.com/leorickli/mongodb-hr/assets/106999054/322e7280-f0a2-4c99-9814-8ca08802cc99">
+<img width="754" alt="Screenshot 2023-12-28 at 18 09 27" src="https://github.com/leorickli/mongodb-hr/assets/106999054/ae433622-6d36-483b-9ff2-c0c5ececdba0">
 
 C. **Indexes**
   1. **Create the "LM_indeagrega" database.**
@@ -106,6 +112,9 @@ C. **Indexes**
      5. Create a sparse index (with one attribute).
      6. Create an index with a lifetime - TTL (with an attribute and an expiration of 20 seconds).
      7. Insert 4 documents into this collection.
+<img width="732" alt="Screenshot 2023-12-28 at 18 10 04" src="https://github.com/leorickli/mongodb-hr/assets/106999054/1f59bf8d-f277-488f-8572-b897ebd71c16">
+<img width="953" alt="Screenshot 2023-12-28 at 18 12 06" src="https://github.com/leorickli/mongodb-hr/assets/106999054/7341d992-cc73-48c6-a2cd-b8f7f54722fc">
+  
   3. **Create a second collection named "LM_indexar2" (which has at least 4 string attributes).**
      1. Create a textual index for this second collection.
      2. Insert 4 documents into this collection.
