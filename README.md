@@ -54,8 +54,6 @@ The characteristics and examples mentioned reflect the trends and common uses of
 
 A. **Installation and creation.**
   1. **Create the “LM_hr” database.**
-<img width="284" alt="Screenshot 2023-12-27 at 21 28 27" src="https://github.com/leorickli/mongodb-hr/assets/106999054/19fc8102-64ee-4960-80ed-936f4fa94c25">
-
   2. **Create the collections: “LM_DEPARTMENT”, “LM_EMPLOYEE”, “LM_DEPENDENT”.**
 <img width="284" alt="Screenshot 2023-12-27 at 21 28 27" src="https://github.com/leorickli/mongodb-hr/assets/106999054/19fc8102-64ee-4960-80ed-936f4fa94c25">
 
@@ -92,7 +90,6 @@ B. **Modeling**
   4. **Insert 4 documents into the collection (N side). Note: Side 1 (is as if it were the mother collection) and side N (is as if it were the daughter collection). In item (B2) each document from the mother collection must reference 2 documents from the daughter collection.**
 <img width="576" alt="Screenshot 2023-12-28 at 18 08 38" src="https://github.com/leorickli/mongodb-hr/assets/106999054/d78c17d9-700e-410e-9510-17a9fb1ffcad">
 <img width="741" alt="Screenshot 2023-12-28 at 18 07 34" src="https://github.com/leorickli/mongodb-hr/assets/106999054/ae54e5a8-0614-456b-b6e7-9889ce82528d">
-
   
   5. **Create a small model that involves two collections with cardinalities N-N. The name of the collections must be “LM_col1b” and “LM_col2b”. In this case, you will indicate whether you will use the reference or whether you will embed the document in the other document.**
      1. Create two name collections (if you embark) or.
@@ -118,13 +115,27 @@ C. **Indexes**
   3. **Create a second collection named "LM_indexar2" (which has at least 4 string attributes).**
      1. Create a textual index for this second collection.
      2. Insert 4 documents into this collection.
+ <img width="1069" alt="Screenshot 2023-12-28 at 18 15 55" src="https://github.com/leorickli/mongodb-hr/assets/106999054/250ab328-925c-48e7-b6fa-bc0d8e8b99f3">
+ <img width="906" alt="Screenshot 2023-12-28 at 18 15 24" src="https://github.com/leorickli/mongodb-hr/assets/106999054/c4a01488-c4a3-4528-ba0c-dda97f9b5928">
+  
   4. **Create a third collection named "LM_Venda" (which will have the attributes: Sales_Cod, UF_Sales, Sales_Prod_Desc, Sales_Value).**
      1. Insert 16 documents (4 documents for each of the UFs - there will be 4 different UFs). Complete the 4 attributes mentioned.
+<img width="965" alt="Screenshot 2023-12-28 at 18 29 09" src="https://github.com/leorickli/mongodb-hr/assets/106999054/d4b24ca0-35d0-488a-8794-2a05b5e49ca2">
+
      2. Create a query that shows the number of documents per UF.
+<img width="504" alt="Screenshot 2023-12-28 at 18 29 38" src="https://github.com/leorickli/mongodb-hr/assets/106999054/56ef3f74-06bf-4db0-9ef0-ac145b6a4456">
+
      3. Create a query that shows the total value of sales per UF.
+<img width="615" alt="Screenshot 2023-12-28 at 18 29 50" src="https://github.com/leorickli/mongodb-hr/assets/106999054/6bced5b8-d7eb-4ad7-bbba-64ddcaf14fe4">
+
      4. Create a query that shows the average sales value per state.
+<img width="631" alt="Screenshot 2023-12-28 at 18 30 00" src="https://github.com/leorickli/mongodb-hr/assets/106999054/975ebc74-b32f-4ebd-bfda-3b6f99ab3d69">
+
      5. Create a query that shows the highest sales value per UF.
+<img width="613" alt="Screenshot 2023-12-28 at 18 30 11" src="https://github.com/leorickli/mongodb-hr/assets/106999054/8b9e3526-b50d-4f2e-aeda-a12145bec4f8">
+
      6. Create a query that shows the lowest sales value per UF.
+<img width="579" alt="Screenshot 2023-12-28 at 18 30 24" src="https://github.com/leorickli/mongodb-hr/assets/106999054/95d30dc3-0633-4cd4-8306-aff9cafd7a07">
 
 D. **Replication**
   1. **Create the replica set "LM_rsposmit".**
