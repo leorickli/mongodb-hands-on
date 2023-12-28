@@ -53,18 +53,40 @@ The characteristics and examples mentioned reflect the trends and common uses of
 ### Part 2 - Hands-On
 
 A. **Installation and creation.**
-  1. **Create the “LM_rh” database.**
-  2. **Create the collections: “LM_DEPARTAMENTO”, “LM_FUNCIONARIO”, “LM_DEPENDENTE”.**
+  1. **Create the “LM_hr” database.**
+<img width="284" alt="Screenshot 2023-12-27 at 21 28 27" src="https://github.com/leorickli/mongodb-hr/assets/106999054/19fc8102-64ee-4960-80ed-936f4fa94c25">
+
+  2. **Create the collections: “LM_DEPARTMENT”, “LM_EMPLOYEE”, “LM_DEPENDENT”.**
+<img width="284" alt="Screenshot 2023-12-27 at 21 28 27" src="https://github.com/leorickli/mongodb-hr/assets/106999054/19fc8102-64ee-4960-80ed-936f4fa94c25">
+
   3. **Insert 3 documents for each collection. Note: At least one insertion for each collection must have one more or less attribute.**
+<img width="993" alt="Screenshot 2023-12-27 at 21 30 30" src="https://github.com/leorickli/mongodb-hr/assets/106999054/aad12914-dfb4-442b-a1a1-ee393bd53a07">
+
   4. **Show the contents of each collection.**
-  5. **For the "LM_DEPARTAMENTO" collection, create a filter based on a description of the department (equality).**
-  6. **For the "LM_FUNCIONARIO" collection to show employees who receive a salary above R$2000.00.**
-  7. **For the "LM_DEPENDENTE" collection, execute the distinct method for the name attribute.**
+<img width="418" alt="Screenshot 2023-12-27 at 21 32 14" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fc2eaec4-adef-4df9-bf3c-32ef86c46c0b">
+<img width="424" alt="Screenshot 2023-12-27 at 21 32 55" src="https://github.com/leorickli/mongodb-hr/assets/106999054/c2c5e09d-f5ce-4acd-9604-1304c87469f0">
+<img width="392" alt="Screenshot 2023-12-27 at 21 33 13" src="https://github.com/leorickli/mongodb-hr/assets/106999054/ac5acf47-7851-49cd-a22d-01e75d17d30a">
+
+  5. **For the "LM_DEPARTMENT" collection, create a filter based on a description of the department (equality).**
+<img width="385" alt="Screenshot 2023-12-28 at 15 09 27" src="https://github.com/leorickli/mongodb-hr/assets/106999054/9477b8e8-600e-4826-942d-7f3c2c6ecc83">
+
+  6. **For the "LM_FUNCTIONARY" collection to show employees who receive a salary above R$2000.00.**
+<img width="411" alt="Screenshot 2023-12-28 at 15 11 23" src="https://github.com/leorickli/mongodb-hr/assets/106999054/a2f00bea-ccdb-48d1-9374-779b8c25b1ed">
+
+  7. **For the "LM_DEPENDENT" collection, execute the distinct method for the name attribute.**
+
+This one is  bit more complex so I created a Jupyter notebook with Python to make that query on my local machine.
+<img width="805" alt="Screenshot 2023-12-28 at 15 56 21" src="https://github.com/leorickli/mongodb-hr/assets/106999054/6a68a3e3-41ac-4f69-b333-df774d49b1ee">
+<img width="370" alt="Screenshot 2023-12-28 at 15 58 25" src="https://github.com/leorickli/mongodb-hr/assets/106999054/6c768101-11c6-4701-9082-05f3de332167">
+
   8. **Perform an update for one of the collections.**
+<img width="556" alt="Screenshot 2023-12-28 at 16 07 32" src="https://github.com/leorickli/mongodb-hr/assets/106999054/dd477e40-390b-479a-8479-0478f847f4d0">
+
   9. **Perform a delete for one of the collections.**
+<img width="969" alt="Screenshot 2023-12-28 at 16 33 17" src="https://github.com/leorickli/mongodb-hr/assets/106999054/78a732f1-1a61-4328-b52a-8951dccf65d7">
 
 B. **Modeling**
-  1. **Create the "LM_modelo" database.**
+  1. **Create the "LM_model" database.**
   2. **Create a small model that involves two collections with cardinalities 1-N. The name of the collections must be “LM_col1a” and “LM_col2a”. In this case, use the concept of referencing the id from one collection to another (send it to side N as if it were the primary key on side 1).**
   3. **Insert 2 documents into the collection (side 1).**
   4. **Insert 4 documents into the collection (N side). Note: Side 1 (is as if it were the mother collection) and side N (is as if it were the daughter collection). In item (B2) each document from the mother collection must reference 2 documents from the daughter collection.**
