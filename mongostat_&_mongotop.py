@@ -1,3 +1,5 @@
+# Populate the collections with this script
+
 from concurrent.futures import ThreadPoolExecutor
 from pymongo import MongoClient
 import random
