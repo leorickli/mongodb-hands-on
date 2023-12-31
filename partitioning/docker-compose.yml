@@ -1,0 +1,72 @@
+version: '3.8'
+services: 
+
+  config1:
+    image: mongo:6.0
+    command: mongod --configsvr --replSet configReplSet --bind_ip_all --port 27019 
+    volumes:
+      - ./config1:/data/db 
+    ports:
+      - "27019:27019"
+
+  config2:
+    image: mongo:6.0
+    command: mongod --configsvr --replSet configReplSet --bind_ip_all --port 27020
+    volumes:
+      - ./config2:/data/db
+    ports:
+      - "27020:27020"
+
+  config3:
+    image: mongo:6.0
+    command: mongod --configsvr --replSet configReplSet --bind_ip_all --port 27021 
+    volumes:
+      - ./config3:/data/db 
+    ports:
+      - "27021:27021"
+
+  shard1:
+    image: mongo:6.0
+    command: mongod --shardsvr --replSet shard1ReplSet --bind_ip_all --port 27018 
+    volumes:
+      - ./shard1:/data/db 
+    ports:
+      - "27022:27018"
+
+  shard2:
+    image: mongo:6.0
+    command: mongod --shardsvr --replSet shard2ReplSet --bind_ip_all --port 27018 
+    volumes:
+      - ./shard2:/data/db 
+    ports:
+      - "27023:27018"
+
+  shard3:
+    image: mongo:6.0
+    command: mongod --shardsvr --replSet shard3ReplSet --bind_ip_all --port 27018 
+    volumes:
+      - ./shard3:/data/db 
+    ports:
+      - "27024:27018"
+
+  shard4:
+    image: mongo:6.0
+    command: mongod --shardsvr --replSet shard4ReplSet --bind_ip_all --port 27018 
+    volumes:
+      - ./shard4:/data/db 
+    ports:
+      - "27025:27018"
+
+  mongos:
+    image: mongo:6.0
+    command: mongos --configdb configReplSet/config1:27019,config2:27020,config3:27021 --bind_ip_all 
+    ports:
+      - "27017:27017" 
+    depends_on:
+      - config1 
+      - config2 
+      - config3
+
+networks: 
+  default:
+    name: mongo-cluster
