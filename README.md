@@ -143,16 +143,17 @@ D. **Replication**
      1. A primary.
      2. Two secondary.
      3. An arbiter.
-<img width="330" alt="Screenshot 2023-12-30 at 17 02 16" src="https://github.com/leorickli/mongodb-hr/assets/106999054/13f8a1c6-1bad-47b8-ad9e-db61d29d389d">
+This is the [docker-compose file that deploys the replication architecture](https://github.com/leorickli/mongodb-hr/tree/main/replication)
+<img width="560" alt="Screenshot 2023-12-31 at 11 46 59" src="https://github.com/leorickli/mongodb-hr/assets/106999054/d091e48d-3344-4178-b3d9-17e45172e456">
+<img width="551" alt="Screenshot 2023-12-31 at 11 47 18" src="https://github.com/leorickli/mongodb-hr/assets/106999054/b2b62e1b-5a54-4bd0-be70-0f7689439127">
   
   3. **On the primary node, create the “LM_col_movies” collection.**
      1. Insert 5 documents into the "LM_col_movies" collection.
-<img width="558" alt="Screenshot 2023-12-30 at 17 04 36" src="https://github.com/leorickli/mongodb-hr/assets/106999054/d9759f60-4328-4498-a283-b232121b6a58">
+<img width="549" alt="Screenshot 2023-12-31 at 11 48 05" src="https://github.com/leorickli/mongodb-hr/assets/106999054/cdad79ad-14ec-4218-b653-3d5cd3ef566e">
 
   4. **Access one of the secondary nodes.**
-     1. Insert 5 documents into the "LM_col_filmes" collection.
-
-*If you want to insert documents into your MongoDB replica set and you're currently connected to a secondary node, you'll need to switch to the primary node to perform the write operation. MongoDB replica sets enforce a primary/secondary architecture where write operations can only be performed on the primary node to ensure data consistency across the cluster.*
+     1. Read 5 documents from the "LM_col_movies" collection.
+<img width="557" alt="Screenshot 2023-12-31 at 11 53 02" src="https://github.com/leorickli/mongodb-hr/assets/106999054/210aa682-18d2-4cb0-93c7-2aaa04109e12">
 
 E. **Partitioning**
   1. **Create a shard.**
@@ -160,6 +161,8 @@ E. **Partitioning**
      1. Three config servers (on Replica Set).
      2. Four shard servers (no Replica Set).
      3. One mongos.
+
+This is the [docker-compose file that deploys the partitioning architecture](https://github.com/leorickli/mongodb-hr/tree/main/partitioning)
 <img width="660" alt="Screenshot 2023-12-30 at 22 02 38" src="https://github.com/leorickli/mongodb-hr/assets/106999054/03642eff-7ffb-417d-b7e1-a464976241f4">
 <img width="566" alt="Screenshot 2023-12-30 at 22 03 12" src="https://github.com/leorickli/mongodb-hr/assets/106999054/cc48493c-9328-4160-9f7b-9b0451153a96">
 <img width="552" alt="Screenshot 2023-12-30 at 22 03 36" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fcfd24d1-02d4-4c79-b083-cc8d53edde18">
@@ -167,15 +170,26 @@ E. **Partitioning**
 
   3. **Connect to the mongos.**
      1. Enable partitioning for a database of your choice.
+<img width="504" alt="Screenshot 2023-12-31 at 11 07 44" src="https://github.com/leorickli/mongodb-hr/assets/106999054/8c205851-5e1b-4752-a29a-6110952c4636">
+
      2. Partition a collection of your choice.
+<img width="807" alt="Screenshot 2023-12-31 at 11 10 40" src="https://github.com/leorickli/mongodb-hr/assets/106999054/24a51eb5-00d9-47cc-9870-ab26e75560e3">
+
      3. Insert 1,000 documents into this collection using the "for" command.
+<img width="675" alt="Screenshot 2023-12-31 at 11 12 34" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fe1d9587-edc2-4e42-8631-a6dfe3a0bc00">
+
      4. Show the distribution of the created collection.
+<img width="546" alt="Screenshot 2023-12-31 at 11 12 56" src="https://github.com/leorickli/mongodb-hr/assets/106999054/6c84d752-414c-4406-bfb7-1c79ace1cf53">
 
 F. **Storage Engines**
   1. **Create a MongoDB instance that uses the mmapv1 storage engine.**
      1. Connect to this instance.
      2. Check the current storage engine.
-     3. Create the “LM_produtos” collection and insert 4 documents.
+     3. Create the “LM_products” collection and insert 4 documents.
+This is the [docker-compose file that deploys the storageEngine architecture](https://github.com/leorickli/mongodb-hr/tree/main/storageEngine)
+<img width="491" alt="Screenshot 2023-12-31 at 13 10 26" src="https://github.com/leorickli/mongodb-hr/assets/106999054/e1db6e2a-8c68-4e1a-b64b-40ba22c8b43b">
+*The error message "no matching manifest for linux/arm64/v8 in the manifest list entries" indicates that the Docker image I'm trying to use (mongo:3.2) does not have a build available for my system's architecture (arm64) for Mac. This is a common issue when trying to run certain Docker images on ARM-based systems, like Apple's M1/M2 Macs or Raspberry Pi devices, as these images might only have been built for amd64 (x86_64) architecture.*
+  
   2. **Create a MongoDB instance that uses the wiredTiger storage engine.**
      1. Connect to this instance.
      2. Check the current storage engine.
@@ -184,24 +198,49 @@ F. **Storage Engines**
      1. Connect to this instance.
      2. Create the dba user with the root role.
      3. Connect with the dba user.
-     4. Create the user “LM_desenv” with the role readWrite in the “LM_rh” database;
-     5. Connect with user “LM_desenv”.
-     6. Create the “LM_funcionarios” collection and insert 4 documents.
+     4. Create the user “LM_dev” with the role readWrite in the “LM_hr” database;
+     5. Connect with user “LM_dev”.
+     6. Create the “LM_employees” collection and insert 4 documents.
 
 G. **Debugging, backup, and restore**
   1. **Create a MongoDB instance.**
-  2. **Connect to this instance (access the exerc4b database).**
-  3. **Create the "LM_Paises" collection and insert 4 documents.**
-  4. **Run a query for the "LM_Paises" collection with a filter of your choice with explain.**
+  2. **Connect to this instance.**
+  3. **Create the "LM_Countries" collection and insert 4 documents.**
+This is the [docker-compose file that deploys the debugging_backup_restore architecture](https://github.com/leorickli/mongodb-hr/tree/main/debugging_backup_restore)
+<img width="351" alt="Screenshot 2023-12-31 at 13 30 26" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fc46873c-f913-4898-9283-b3b210e8d6e7">
+  
+  4. **Run a query for the "LM_Countries" collection with a filter of your choice with explain.**
+<img width="1231" alt="Screenshot 2023-12-31 at 13 31 50" src="https://github.com/leorickli/mongodb-hr/assets/106999054/9b2d6147-7dfe-420d-ab7c-0b7c308f7c99">
+<img width="571" alt="Screenshot 2023-12-31 at 13 32 40" src="https://github.com/leorickli/mongodb-hr/assets/106999054/30d7fff3-1d96-4ce8-bc70-995166956bd0">
+
   5. **Create an index for an attribute that you filtered on the item.**
-  6. **Run the same query as the item.**
-  7. **Create the “LM_Numero1” collection and insert 50,000 documents in parallel; in another window run the mongostat utility.**
-  8. **Create the “LM_Numero2” collection and insert 50,000 documents in parallel; in another window run the mongotop utility.**
+<img width="447" alt="Screenshot 2023-12-31 at 13 33 54" src="https://github.com/leorickli/mongodb-hr/assets/106999054/f510893b-2542-4115-bf69-83e9c9eaed42">
+
+  6. **Run the same query on the item.**
+<img width="536" alt="Screenshot 2023-12-31 at 13 36 25" src="https://github.com/leorickli/mongodb-hr/assets/106999054/5b61e37d-6170-4c97-be1d-d71edda741b4">
+
+  7. **Create the “LM_Number1” collection and insert 50,000 documents in parallel; in another window run the mongostat utility.**
+<img width="332" alt="Screenshot 2023-12-31 at 13 56 42" src="https://github.com/leorickli/mongodb-hr/assets/106999054/89a9e431-16aa-4007-b45f-3f2f1cab8cae">
+This is the [Python script that deploys the 50.000 documents so mongostat can track](https://github.com/leorickli/mongodb-hr/blob/main/mongostat_&_mongotop.py)
+<img width="779" alt="Screenshot 2023-12-31 at 14 00 06" src="https://github.com/leorickli/mongodb-hr/assets/106999054/54b963ec-3397-44f7-8398-cfaeae776691">
+
+  8. **Create the “LM_Number2” collection and insert 50,000 documents in parallel; in another window run the mongotop utility.**
+<img width="330" alt="Screenshot 2023-12-31 at 14 05 52" src="https://github.com/leorickli/mongodb-hr/assets/106999054/4965c46a-f9be-418f-be85-708911373596">
+This is the [Python script that deploys the 50.000 documents so mongostat can track](https://github.com/leorickli/mongodb-hr/blob/main/mongostat_&_mongotop.py)
+<img width="554" alt="Screenshot 2023-12-31 at 14 05 20" src="https://github.com/leorickli/mongodb-hr/assets/106999054/1b9d2369-78a5-45f2-ab83-c9ef7505f7d1">
+
   9. **Exit Mongo Shell and make a backup of the entire MongoDB instance.**
+<img width="783" alt="Screenshot 2023-12-31 at 14 07 40" src="https://github.com/leorickli/mongodb-hr/assets/106999054/00bb6b96-f3e0-4fcf-b2da-f1cdc745409a">
+
   10. **Kill the MongoDB process.**
+<img width="586" alt="Screenshot 2023-12-31 at 14 08 41" src="https://github.com/leorickli/mongodb-hr/assets/106999054/ccf25f4f-eff2-4119-8f6c-e2e416f3f59f">
+
   11. **Delete the MongoDB data directory.**
+<img width="690" alt="Screenshot 2023-12-31 at 14 14 37" src="https://github.com/leorickli/mongodb-hr/assets/106999054/1ee56145-43d6-49b2-9706-5e84baf7eadf">
+
   12. **Restore MongoDB (the path must be created previously).**
-  13. **Access the instance and go to the exerc4b database. Check the number of documents per collection.**
+  13. **Access the instance and go to the database. Check the number of documents per collection.**
+<img width="1441" alt="Screenshot 2023-12-31 at 15 01 43" src="https://github.com/leorickli/mongodb-hr/assets/106999054/462593f7-6201-441a-9c1e-060ec8fd4091">
 
 
 
