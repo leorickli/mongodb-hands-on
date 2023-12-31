@@ -119,23 +119,23 @@ C. **Indexes**
  <img width="906" alt="Screenshot 2023-12-28 at 18 15 24" src="https://github.com/leorickli/mongodb-hr/assets/106999054/c4a01488-c4a3-4528-ba0c-dda97f9b5928">
   
   4. **Create a third collection named "LM_Venda" (which will have the attributes: Sales_Cod, UF_Sales, Sales_Prod_Desc, Sales_Value).**
-     1. Insert 16 documents (4 documents for each of the UFs - there will be 4 different UFs). Complete the 4 attributes mentioned.
-<img width="965" alt="Screenshot 2023-12-28 at 18 29 09" src="https://github.com/leorickli/mongodb-hr/assets/106999054/d4b24ca0-35d0-488a-8794-2a05b5e49ca2">
+     1. Insert 16 documents (4 documents for each of the UFs - there will be 4 different UFs). Complete the 4 attributes mentioned.\
+        <img width="965" alt="Screenshot 2023-12-28 at 18 29 09" src="https://github.com/leorickli/mongodb-hr/assets/106999054/d4b24ca0-35d0-488a-8794-2a05b5e49ca2">
 
-     2. Create a query that shows the number of documents per UF.
-<img width="504" alt="Screenshot 2023-12-28 at 18 29 38" src="https://github.com/leorickli/mongodb-hr/assets/106999054/56ef3f74-06bf-4db0-9ef0-ac145b6a4456">
+     2. Create a query that shows the number of documents per UF.\
+        <img width="504" alt="Screenshot 2023-12-28 at 18 29 38" src="https://github.com/leorickli/mongodb-hr/assets/106999054/56ef3f74-06bf-4db0-9ef0-ac145b6a4456">
 
-     3. Create a query that shows the total value of sales per UF.
-<img width="615" alt="Screenshot 2023-12-28 at 18 29 50" src="https://github.com/leorickli/mongodb-hr/assets/106999054/6bced5b8-d7eb-4ad7-bbba-64ddcaf14fe4">
+     3. Create a query that shows the total value of sales per UF.\
+        <img width="615" alt="Screenshot 2023-12-28 at 18 29 50" src="https://github.com/leorickli/mongodb-hr/assets/106999054/6bced5b8-d7eb-4ad7-bbba-64ddcaf14fe4">
 
-     4. Create a query that shows the average sales value per state.
-<img width="631" alt="Screenshot 2023-12-28 at 18 30 00" src="https://github.com/leorickli/mongodb-hr/assets/106999054/975ebc74-b32f-4ebd-bfda-3b6f99ab3d69">
+     4. Create a query that shows the average sales value per state.\
+        <img width="631" alt="Screenshot 2023-12-28 at 18 30 00" src="https://github.com/leorickli/mongodb-hr/assets/106999054/975ebc74-b32f-4ebd-bfda-3b6f99ab3d69">
 
-     5. Create a query that shows the highest sales value per UF.
-<img width="613" alt="Screenshot 2023-12-28 at 18 30 11" src="https://github.com/leorickli/mongodb-hr/assets/106999054/8b9e3526-b50d-4f2e-aeda-a12145bec4f8">
+     5. Create a query that shows the highest sales value per UF.\
+        <img width="613" alt="Screenshot 2023-12-28 at 18 30 11" src="https://github.com/leorickli/mongodb-hr/assets/106999054/8b9e3526-b50d-4f2e-aeda-a12145bec4f8">
 
-     6. Create a query that shows the lowest sales value per UF.
-<img width="579" alt="Screenshot 2023-12-28 at 18 30 24" src="https://github.com/leorickli/mongodb-hr/assets/106999054/95d30dc3-0633-4cd4-8306-aff9cafd7a07">
+     6. Create a query that shows the lowest sales value per UF.\
+        <img width="579" alt="Screenshot 2023-12-28 at 18 30 24" src="https://github.com/leorickli/mongodb-hr/assets/106999054/95d30dc3-0633-4cd4-8306-aff9cafd7a07">
 
 D. **Replication**
   1. **Create the replica set "LM_rsposmit".**
@@ -169,21 +169,27 @@ E. **Partitioning**
 
   3. **Connect to the mongos.**
      1. Enable partitioning for a database of your choice.\
-<img width="504" alt="Screenshot 2023-12-31 at 11 07 44" src="https://github.com/leorickli/mongodb-hr/assets/106999054/8c205851-5e1b-4752-a29a-6110952c4636">\
+        <img width="504" alt="Screenshot 2023-12-31 at 11 07 44" src="https://github.com/leorickli/mongodb-hr/assets/106999054/8c205851-5e1b-4752-a29a-6110952c4636">
+
      2. Partition a collection of your choice.\
-<img width="807" alt="Screenshot 2023-12-31 at 11 10 40" src="https://github.com/leorickli/mongodb-hr/assets/106999054/24a51eb5-00d9-47cc-9870-ab26e75560e3">\
+        <img width="807" alt="Screenshot 2023-12-31 at 11 10 40" src="https://github.com/leorickli/mongodb-hr/assets/106999054/24a51eb5-00d9-47cc-9870-ab26e75560e3">
+
      3. Insert 1,000 documents into this collection using the "for" command.\
-<img width="675" alt="Screenshot 2023-12-31 at 11 12 34" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fe1d9587-edc2-4e42-8631-a6dfe3a0bc00">\
+        <img width="675" alt="Screenshot 2023-12-31 at 11 12 34" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fe1d9587-edc2-4e42-8631-a6dfe3a0bc00">
+
      4. Show the distribution of the created collection.\
-<img width="546" alt="Screenshot 2023-12-31 at 11 12 56" src="https://github.com/leorickli/mongodb-hr/assets/106999054/6c84d752-414c-4406-bfb7-1c79ace1cf53">\
+        <img width="546" alt="Screenshot 2023-12-31 at 11 12 56" src="https://github.com/leorickli/mongodb-hr/assets/106999054/6c84d752-414c-4406-bfb7-1c79ace1cf53">
 
 F. **Storage Engines**
   1. **Create a MongoDB instance that uses the mmapv1 storage engine.**
      1. Connect to this instance.
      2. Check the current storage engine.
      3. Create the “LM_products” collection and insert 4 documents.
+
 *This is the [docker-compose file](https://github.com/leorickli/mongodb-hr/tree/main/storageEngine) that deploys the storageEngine architecture.*
+
 <img width="491" alt="Screenshot 2023-12-31 at 13 10 26" src="https://github.com/leorickli/mongodb-hr/assets/106999054/e1db6e2a-8c68-4e1a-b64b-40ba22c8b43b">
+
 *The error message "no matching manifest for linux/arm64/v8 in the manifest list entries" indicates that the Docker image I'm trying to use (mongo:3.2) does not have a build available for my system's architecture (arm64) for Mac. This is a common issue when trying to run certain Docker images on ARM-based systems, like Apple's M1/M2 Macs or Raspberry Pi devices, as these images might only have been built for amd64 (x86_64) architecture.*
   
   2. **Create a MongoDB instance that uses the wiredTiger storage engine.**
