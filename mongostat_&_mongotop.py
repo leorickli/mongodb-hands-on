@@ -5,7 +5,7 @@ import random
 # Function to insert a document
 def insert_document(client, i):
     db = client.sampleDatabase
-    collection = db.LM_Number1
+    collection = db.LM_Number1 # Or LM_Number2 for mongotop
     document = {"_id": i, "value": random.randint(1, 1000)}
     collection.insert_one(document)
 
