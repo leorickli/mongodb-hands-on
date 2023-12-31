@@ -167,18 +167,15 @@ E. **Partitioning**
 <img width="552" alt="Screenshot 2023-12-30 at 22 03 36" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fcfd24d1-02d4-4c79-b083-cc8d53edde18">
 <img width="429" alt="Screenshot 2023-12-30 at 22 04 07" src="https://github.com/leorickli/mongodb-hr/assets/106999054/dfcbe918-ab97-42d3-858d-17ebba0268d7">
 
-  3. **Connect to the mongos.**\
-     1. Enable partitioning for a database of your choice.
-<img width="504" alt="Screenshot 2023-12-31 at 11 07 44" src="https://github.com/leorickli/mongodb-hr/assets/106999054/8c205851-5e1b-4752-a29a-6110952c4636">
-
-     2. Partition a collection of your choice.
-<img width="807" alt="Screenshot 2023-12-31 at 11 10 40" src="https://github.com/leorickli/mongodb-hr/assets/106999054/24a51eb5-00d9-47cc-9870-ab26e75560e3">
-
-     3. Insert 1,000 documents into this collection using the "for" command.
-<img width="675" alt="Screenshot 2023-12-31 at 11 12 34" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fe1d9587-edc2-4e42-8631-a6dfe3a0bc00">
-
-     4. Show the distribution of the created collection.
-<img width="546" alt="Screenshot 2023-12-31 at 11 12 56" src="https://github.com/leorickli/mongodb-hr/assets/106999054/6c84d752-414c-4406-bfb7-1c79ace1cf53">
+  3. **Connect to the mongos.**
+     1. Enable partitioning for a database of your choice.\
+<img width="504" alt="Screenshot 2023-12-31 at 11 07 44" src="https://github.com/leorickli/mongodb-hr/assets/106999054/8c205851-5e1b-4752-a29a-6110952c4636">\
+     2. Partition a collection of your choice.\
+<img width="807" alt="Screenshot 2023-12-31 at 11 10 40" src="https://github.com/leorickli/mongodb-hr/assets/106999054/24a51eb5-00d9-47cc-9870-ab26e75560e3">\
+     3. Insert 1,000 documents into this collection using the "for" command.\
+<img width="675" alt="Screenshot 2023-12-31 at 11 12 34" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fe1d9587-edc2-4e42-8631-a6dfe3a0bc00">\
+     4. Show the distribution of the created collection.\
+<img width="546" alt="Screenshot 2023-12-31 at 11 12 56" src="https://github.com/leorickli/mongodb-hr/assets/106999054/6c84d752-414c-4406-bfb7-1c79ace1cf53">\
 
 F. **Storage Engines**
   1. **Create a MongoDB instance that uses the mmapv1 storage engine.**
