@@ -207,8 +207,10 @@ F. **Storage Engines**
 G. **Debugging, backup, and restore**
   1. **Create a MongoDB instance.**
   2. **Connect to this instance.**
-  3. **Create the "LM_Countries" collection and insert 4 documents.**\
+  3. **Create the "LM_Countries" collection and insert 4 documents.**
+
 *This is the [docker-compose file](https://github.com/leorickli/mongodb-hr/tree/main/debugging_backup_restore) that deploys the debugging_backup_restore architecture.*
+
 <img width="351" alt="Screenshot 2023-12-31 at 13 30 26" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fc46873c-f913-4898-9283-b3b210e8d6e7">
   
   4. **Run a query for the "LM_Countries" collection with a filter of your choice with explain.**
