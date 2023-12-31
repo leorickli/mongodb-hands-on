@@ -143,10 +143,16 @@ D. **Replication**
      1. A primary.
      2. Two secondary.
      3. An arbiter.
-  3. **On the primary node, create the “LM_col_filmes” collection.**
-     1. Insert 5 documents into the "LM_col_filmes" collection.
+<img width="330" alt="Screenshot 2023-12-30 at 17 02 16" src="https://github.com/leorickli/mongodb-hr/assets/106999054/13f8a1c6-1bad-47b8-ad9e-db61d29d389d">
+  
+  3. **On the primary node, create the “LM_col_movies” collection.**
+     1. Insert 5 documents into the "LM_col_movies" collection.
+<img width="558" alt="Screenshot 2023-12-30 at 17 04 36" src="https://github.com/leorickli/mongodb-hr/assets/106999054/d9759f60-4328-4498-a283-b232121b6a58">
+
   4. **Access one of the secondary nodes.**
      1. Insert 5 documents into the "LM_col_filmes" collection.
+
+*If you want to insert documents into your MongoDB replica set and you're currently connected to a secondary node, you'll need to switch to the primary node to perform the write operation. MongoDB replica sets enforce a primary/secondary architecture where write operations can only be performed on the primary node to ensure data consistency across the cluster.*
 
 E. **Partitioning**
   1. **Create a shard.**
@@ -154,6 +160,11 @@ E. **Partitioning**
      1. Three config servers (on Replica Set).
      2. Four shard servers (no Replica Set).
      3. One mongos.
+<img width="660" alt="Screenshot 2023-12-30 at 22 02 38" src="https://github.com/leorickli/mongodb-hr/assets/106999054/03642eff-7ffb-417d-b7e1-a464976241f4">
+<img width="566" alt="Screenshot 2023-12-30 at 22 03 12" src="https://github.com/leorickli/mongodb-hr/assets/106999054/cc48493c-9328-4160-9f7b-9b0451153a96">
+<img width="552" alt="Screenshot 2023-12-30 at 22 03 36" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fcfd24d1-02d4-4c79-b083-cc8d53edde18">
+<img width="429" alt="Screenshot 2023-12-30 at 22 04 07" src="https://github.com/leorickli/mongodb-hr/assets/106999054/dfcbe918-ab97-42d3-858d-17ebba0268d7">
+
   3. **Connect to the mongos.**
      1. Enable partitioning for a database of your choice.
      2. Partition a collection of your choice.
