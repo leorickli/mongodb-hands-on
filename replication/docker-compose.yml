@@ -1,0 +1,51 @@
+version: '3.8'
+services:
+  mongo-primary:
+    image: mongo:latest
+    command: --replSet "MB_rsposmit"
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-primary-data:/data/db
+    networks:
+      - mongo-cluster
+
+  mongo-secondary1:
+    image: mongo:latest
+    command: --replSet "MB_rsposmit"
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo-secondary1-data:/data/db
+    networks:
+      - mongo-cluster
+
+  mongo-secondary2:
+    image: mongo:latest
+    command: --replSet "MB_rsposmit"
+    ports:
+      - "27019:27017"
+    volumes:
+      - mongo-secondary2-data:/data/db
+    networks:
+      - mongo-cluster
+
+  mongo-arbiter:
+    image: mongo:latest
+    command: --replSet "MB_rsposmit" --oplogSize 1
+    ports:
+      - "27020:27017"
+    volumes:
+      - mongo-arbiter-data:/data/db
+    networks:
+      - mongo-cluster
+
+networks:
+  mongo-cluster:
+    driver: bridge
+
+volumes:
+  mongo-primary-data:
+  mongo-secondary1-data:
+  mongo-secondary2-data:
+  mongo-arbiter-data:
