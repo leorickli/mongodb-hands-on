@@ -142,8 +142,8 @@ D. **Replication**
   2. **Architecture drawing.**
      1. A primary.
      2. Two secondary.
-     3. An arbiter.
-This is the [docker-compose file that deploys the replication architecture](https://github.com/leorickli/mongodb-hr/tree/main/replication)
+     3. An arbiter.\
+*This is the [docker-compose file](https://github.com/leorickli/mongodb-hr/tree/main/replication) that deploys the replication architecture.*
 <img width="560" alt="Screenshot 2023-12-31 at 11 46 59" src="https://github.com/leorickli/mongodb-hr/assets/106999054/d091e48d-3344-4178-b3d9-17e45172e456">
 <img width="551" alt="Screenshot 2023-12-31 at 11 47 18" src="https://github.com/leorickli/mongodb-hr/assets/106999054/b2b62e1b-5a54-4bd0-be70-0f7689439127">
   
@@ -160,15 +160,14 @@ E. **Partitioning**
   2. **Design an architecture.**
      1. Three config servers (on Replica Set).
      2. Four shard servers (no Replica Set).
-     3. One mongos.
-
-This is the [docker-compose file that deploys the partitioning architecture](https://github.com/leorickli/mongodb-hr/tree/main/partitioning)
+     3. One mongos.\
+*This is the [docker-compose file](https://github.com/leorickli/mongodb-hr/tree/main/partitioning) that deploys the partitioning architecture.*
 <img width="660" alt="Screenshot 2023-12-30 at 22 02 38" src="https://github.com/leorickli/mongodb-hr/assets/106999054/03642eff-7ffb-417d-b7e1-a464976241f4">
 <img width="566" alt="Screenshot 2023-12-30 at 22 03 12" src="https://github.com/leorickli/mongodb-hr/assets/106999054/cc48493c-9328-4160-9f7b-9b0451153a96">
 <img width="552" alt="Screenshot 2023-12-30 at 22 03 36" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fcfd24d1-02d4-4c79-b083-cc8d53edde18">
 <img width="429" alt="Screenshot 2023-12-30 at 22 04 07" src="https://github.com/leorickli/mongodb-hr/assets/106999054/dfcbe918-ab97-42d3-858d-17ebba0268d7">
 
-  3. **Connect to the mongos.**
+  3. **Connect to the mongos.**\
      1. Enable partitioning for a database of your choice.
 <img width="504" alt="Screenshot 2023-12-31 at 11 07 44" src="https://github.com/leorickli/mongodb-hr/assets/106999054/8c205851-5e1b-4752-a29a-6110952c4636">
 
@@ -186,7 +185,7 @@ F. **Storage Engines**
      1. Connect to this instance.
      2. Check the current storage engine.
      3. Create the “LM_products” collection and insert 4 documents.
-This is the [docker-compose file that deploys the storageEngine architecture](https://github.com/leorickli/mongodb-hr/tree/main/storageEngine)
+*This is the [docker-compose file](https://github.com/leorickli/mongodb-hr/tree/main/storageEngine) that deploys the storageEngine architecture.*
 <img width="491" alt="Screenshot 2023-12-31 at 13 10 26" src="https://github.com/leorickli/mongodb-hr/assets/106999054/e1db6e2a-8c68-4e1a-b64b-40ba22c8b43b">
 *The error message "no matching manifest for linux/arm64/v8 in the manifest list entries" indicates that the Docker image I'm trying to use (mongo:3.2) does not have a build available for my system's architecture (arm64) for Mac. This is a common issue when trying to run certain Docker images on ARM-based systems, like Apple's M1/M2 Macs or Raspberry Pi devices, as these images might only have been built for amd64 (x86_64) architecture.*
   
@@ -205,8 +204,8 @@ This is the [docker-compose file that deploys the storageEngine architecture](ht
 G. **Debugging, backup, and restore**
   1. **Create a MongoDB instance.**
   2. **Connect to this instance.**
-  3. **Create the "LM_Countries" collection and insert 4 documents.**
-This is the [docker-compose file that deploys the debugging_backup_restore architecture](https://github.com/leorickli/mongodb-hr/tree/main/debugging_backup_restore)
+  3. **Create the "LM_Countries" collection and insert 4 documents.**\
+*This is the [docker-compose file](https://github.com/leorickli/mongodb-hr/tree/main/debugging_backup_restore) that deploys the debugging_backup_restore architecture.*
 <img width="351" alt="Screenshot 2023-12-31 at 13 30 26" src="https://github.com/leorickli/mongodb-hr/assets/106999054/fc46873c-f913-4898-9283-b3b210e8d6e7">
   
   4. **Run a query for the "LM_Countries" collection with a filter of your choice with explain.**
@@ -221,12 +220,12 @@ This is the [docker-compose file that deploys the debugging_backup_restore archi
 
   7. **Create the “LM_Number1” collection and insert 50,000 documents in parallel; in another window run the mongostat utility.**
 <img width="332" alt="Screenshot 2023-12-31 at 13 56 42" src="https://github.com/leorickli/mongodb-hr/assets/106999054/89a9e431-16aa-4007-b45f-3f2f1cab8cae">
-This is the [Python script that deploys the 50.000 documents so mongostat can track](https://github.com/leorickli/mongodb-hr/blob/main/mongostat_&_mongotop.py)
+*This is the [Python script](https://github.com/leorickli/mongodb-hr/blob/main/mongostat_&_mongotop.py) that deploys the 50.000 documents so mongostat can track.*
 <img width="779" alt="Screenshot 2023-12-31 at 14 00 06" src="https://github.com/leorickli/mongodb-hr/assets/106999054/54b963ec-3397-44f7-8398-cfaeae776691">
 
   8. **Create the “LM_Number2” collection and insert 50,000 documents in parallel; in another window run the mongotop utility.**
-<img width="330" alt="Screenshot 2023-12-31 at 14 05 52" src="https://github.com/leorickli/mongodb-hr/assets/106999054/4965c46a-f9be-418f-be85-708911373596">
-This is the [Python script that deploys the 50.000 documents so mongostat can track](https://github.com/leorickli/mongodb-hr/blob/main/mongostat_&_mongotop.py)
+<img width="330" alt="Screenshot 2023-12-31 at 14 05 52" src="https://github.com/leorickli/mongodb-hr/assets/106999054/4965c46a-f9be-418f-be85-708911373596">\
+*This is the [Python script](https://github.com/leorickli/mongodb-hr/blob/main/mongostat_&_mongotop.py) that deploys the 50.000 documents so mongostat can track.*
 <img width="554" alt="Screenshot 2023-12-31 at 14 05 20" src="https://github.com/leorickli/mongodb-hr/assets/106999054/1b9d2369-78a5-45f2-ab83-c9ef7505f7d1">
 
   9. **Exit Mongo Shell and make a backup of the entire MongoDB instance.**
