@@ -224,26 +224,31 @@ G. **Debugging, backup, and restore**
 <img width="536" alt="Screenshot 2023-12-31 at 13 36 25" src="https://github.com/leorickli/mongodb-hr/assets/106999054/5b61e37d-6170-4c97-be1d-d71edda741b4">
 
   7. **Create the “LM_Number1” collection and insert 50,000 documents in parallel; in another window run the mongostat utility.**
-<img width="332" alt="Screenshot 2023-12-31 at 13 56 42" src="https://github.com/leorickli/mongodb-hr/assets/106999054/89a9e431-16aa-4007-b45f-3f2f1cab8cae">
-*This is the [Python script](https://github.com/leorickli/mongodb-hr/blob/main/mongostat_&_mongotop.py) that deploys the 50.000 documents so mongostat can track.*
-<img width="779" alt="Screenshot 2023-12-31 at 14 00 06" src="https://github.com/leorickli/mongodb-hr/assets/106999054/54b963ec-3397-44f7-8398-cfaeae776691">
+     <img width="332" alt="Screenshot 2023-12-31 at 13 56 42" src="https://github.com/leorickli/mongodb-hr/assets/106999054/89a9e431-16aa-4007-b45f-3f2f1cab8cae">
+    
+     *This is the [Python script](https://github.com/leorickli/mongodb-hr/blob/main/mongostat_&_mongotop.py) that deploys the 50.000 documents so mongostat can track.*
+    
+     <img width="779" alt="Screenshot 2023-12-31 at 14 00 06" src="https://github.com/leorickli/mongodb-hr/assets/106999054/54b963ec-3397-44f7-8398-cfaeae776691">
 
   8. **Create the “LM_Number2” collection and insert 50,000 documents in parallel; in another window run the mongotop utility.**
-<img width="330" alt="Screenshot 2023-12-31 at 14 05 52" src="https://github.com/leorickli/mongodb-hr/assets/106999054/4965c46a-f9be-418f-be85-708911373596">\
-*This is the [Python script](https://github.com/leorickli/mongodb-hr/blob/main/mongostat_&_mongotop.py) that deploys the 50.000 documents so mongostat can track.*
-<img width="554" alt="Screenshot 2023-12-31 at 14 05 20" src="https://github.com/leorickli/mongodb-hr/assets/106999054/1b9d2369-78a5-45f2-ab83-c9ef7505f7d1">
+    <img width="330" alt="Screenshot 2023-12-31 at 14 05 52" src="https://github.com/leorickli/mongodb-hr/assets/106999054/4965c46a-f9be-418f-be85-708911373596">
 
-  9. **Exit Mongo Shell and make a backup of the entire MongoDB instance.**
+   *This is the [Python script](https://github.com/leorickli/mongodb-hr/blob/main/mongostat_&_mongotop.py) that deploys the 50.000 documents so mongostat can track.*
+
+   <img width="554" alt="Screenshot 2023-12-31 at 14 05 20" src="https://github.com/leorickli/mongodb-hr/assets/106999054/1b9d2369-78a5-45f2-ab83-c9ef7505f7d1">
+
+
+  10. **Exit Mongo Shell and make a backup of the entire MongoDB instance.**
 <img width="783" alt="Screenshot 2023-12-31 at 14 07 40" src="https://github.com/leorickli/mongodb-hr/assets/106999054/00bb6b96-f3e0-4fcf-b2da-f1cdc745409a">
 
-  10. **Kill the MongoDB process.**
+  11. **Kill the MongoDB process.**
 <img width="586" alt="Screenshot 2023-12-31 at 14 08 41" src="https://github.com/leorickli/mongodb-hr/assets/106999054/ccf25f4f-eff2-4119-8f6c-e2e416f3f59f">
 
-  11. **Delete the MongoDB data directory.**
+  12. **Delete the MongoDB data directory.**
 <img width="690" alt="Screenshot 2023-12-31 at 14 14 37" src="https://github.com/leorickli/mongodb-hr/assets/106999054/1ee56145-43d6-49b2-9706-5e84baf7eadf">
 
-  12. **Restore MongoDB (the path must be created previously).**
-  13. **Access the instance and go to the database. Check the number of documents per collection.**
+  13. **Restore MongoDB (the path must be created previously).**
+  14. **Access the instance and go to the database. Check the number of documents per collection.**
 <img width="1441" alt="Screenshot 2023-12-31 at 15 01 43" src="https://github.com/leorickli/mongodb-hr/assets/106999054/462593f7-6201-441a-9c1e-060ec8fd4091">
 
 
