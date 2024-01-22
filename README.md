@@ -1,4 +1,4 @@
-# mongodb-hr
+# mongodb-hands-on
 
 ### Part 1 - Concepts
 
